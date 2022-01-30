@@ -1,0 +1,131 @@
+.order {
+  margin-top: 50px;
+  // margin-top убрать потом
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 69px;
+
+  .title {
+    font-size: 18px;
+    line-height: 125%;
+    color: #888888;
+    margin-right: 25px;
+  }
+
+  .weeks {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    column-gap: 16px;
+
+    .week {
+      list-style: none;
+      padding: 5px 9px;
+      background: #fff;
+      border-radius: 20px;
+      color: #191919;
+      font-size: 16px;
+      line-height: 130%;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.activeWeek, &:hover {
+        color: #FFFFFF;
+        background: #185ADB;
+      }
+    }
+  }
+}
+
+.scheduleTable {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  justify-content: center;
+
+  .day {
+    flex: 0 1 217px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+
+    .head {
+      background: #E5E5E5;
+      padding: 12px 24px;
+      font-size: 14px;
+      line-height: 130%;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      height: 274px;
+      box-sizing: border-box;
+
+      &:not(:last-child) {
+        border-bottom: 2px solid #F5F5F5;
+      }
+
+      .time {
+        position: relative;
+        color: #191919;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 130%;
+        margin-bottom: 8px;
+
+        .live {
+          position: absolute;
+          top: 8px;
+          right: 0;
+          display: flex;
+          color: #FF0011;
+          font-size: 11px;
+          line-height: 1;
+
+          &::before {
+            content: '';
+            width: 11px;
+            height: 11px;
+            background: #FF0011;
+            border-radius: 100%;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .place {
+        margin-bottom: 8px;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 130%;
+        color: #185ADB;
+
+      }
+
+      .description {
+        margin-bottom: 22px;
+        font-size: 13px;
+        line-height: 130%;
+      }
+
+      &.notFilled {
+        .time {
+          color: #E5E5E5;
+        }
+      }
+    }
+
+    &.specialDay {
+      .head {
+        background: #FFEE00;
+        font-weight: 800;
+      }
+    }
+  }
+}

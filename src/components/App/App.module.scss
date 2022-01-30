@@ -1,0 +1,29 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.schedule {
+  position: relative;
+  margin: 77px 0;
+}
+
+.viewSwitcher {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  line-height: 130%;
+  padding: 12px 21px;
+  border: 1px solid #000222;
+  border-radius: 46px;
+
+  .select {
+    border: none;
+    background: transparent;
+    color: #808090;
+    outline: none;
+    cursor: pointer;
+  }
+}
