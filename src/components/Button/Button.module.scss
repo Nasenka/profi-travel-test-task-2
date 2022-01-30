@@ -1,16 +1,16 @@
 .default {
   position: relative;
-  border: 1px solid #185ADB;
-  background: #fff;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid #185adb;
   border-radius: 56px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 125%;
   padding: 10px 54px 10px 10px;
   min-width: 264px;
   box-sizing: border-box;
-  overflow: hidden;
-  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 125%;
+  background: #fff;
 
   &::after {
     content: '';
@@ -39,8 +39,8 @@
     background: #E5E5E5;
 
     &::after {
-      background-color: #E5E5E5;
       background-image: url("../../assets/images/check.svg");
+      background-color: #E5E5E5;
       border-left: 1px solid #C0C0C0;
     }
 
@@ -57,42 +57,42 @@
 .circle {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  justify-content: flex-end;
   margin-top: auto;
-  width: 117px;
+  margin-left: auto;
   border: none;
   padding: 0;
-  background: transparent;
+  width: 117px;
   font-size: 11px;
   line-height: 135%;
-  color: #888899;
   text-align: right;
+  color: #888899;
+  background: transparent;
   cursor: pointer;
-  justify-content: flex-end;
 
   &::after {
-    content: '';
+    content: "";
     flex: 0 0 34px;
+    margin-left: 16px;
+    border: 1px solid #185adb;
+    border-radius: 100%;
     width: 34px;
     height: 34px;
-    border-radius: 100%;
-    margin-left: 16px;
-    border: 1px solid #185ADB;
     background: url("../../assets/images/plusSmall.svg") no-repeat center center #fff;
   }
 
   &:hover {
     &::after {
-      background-color: #185ADB;
       background-image: url("../../assets/images/plusSmallHover.svg");
+      background-color: #185adb;
     }
   }
 
   &.active {
     &::after {
-      border-color: #C0C0C0;
-      background-color: #E5E5E5;
+      border-color: #c0c0c0;
       background-image: url("../../assets/images/check.svg");
+      background-color: #e5e5e5;
     }
 
     &:hover {
@@ -113,4 +113,10 @@
   font-size: 14px;
   line-height: 130%;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .default {
+    width: 100%;
+  }
 }

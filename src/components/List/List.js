@@ -95,7 +95,7 @@ function List() {
               320: {
                 slidesPerView: 1,
               },
-              768: {
+              566: {
                 slidesPerView: 2,
               },
               1024: {
