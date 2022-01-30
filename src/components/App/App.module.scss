@@ -1,7 +1,8 @@
 .container {
-  max-width: 1440px;
   margin: 0 auto;
   padding: 0 80px;
+  min-width: 320px;
+  max-width: 1440px;
 }
 
 .schedule {
@@ -11,19 +12,35 @@
 
 .viewSwitcher {
   position: absolute;
-  top: 0;
   right: 0;
-  font-size: 14px;
-  line-height: 130%;
-  padding: 12px 21px;
+  top: 0;
   border: 1px solid #000222;
   border-radius: 46px;
+  padding: 12px 21px;
+  font-size: 14px;
+  line-height: 130%;
 
   .select {
-    border: none;
-    background: transparent;
-    color: #808090;
     outline: none;
+    border: none;
+    color: #808090;
+    background: transparent;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 1279px) {
+  .container{
+    padding: 0 30px;
+  }
+
+  .viewSwitcher {
+    display: none;
+  }
+}
+
+@media (max-width: 566px) {
+  .container{
+    padding: 0 20px;
   }
 }

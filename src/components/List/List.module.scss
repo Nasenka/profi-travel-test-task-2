@@ -1,23 +1,23 @@
 .scheduleList {
+  overflow: hidden;
   border-radius: 24px;
   background: #fff;
-  overflow: hidden;
 }
 
 .day {
   margin-bottom: 8px;
 
   .head {
-    background: #E5E5E5;
-    font-size: 24px;
-    line-height: 125%;
     display: flex;
     padding: 13px 32px;
+    font-size: 24px;
+    line-height: 125%;
+    background: #e5e5e5;
 
     .date {
-      padding-right: 12px;
-      border-right: 1px solid #000222;
       margin-right: 12px;
+      border-right: 1px solid #000222;
+      padding-right: 12px;
     }
   }
 
@@ -41,9 +41,9 @@
 
           &::after {
             content: '';
-            background: url("../../assets/images/arrow.svg") no-repeat center center;
             width: 8px;
             height: 16px;
+            background: url("../../assets/images/arrow.svg") no-repeat center center;
           }
         }
 
@@ -53,10 +53,10 @@
 
           &::after {
             content: '';
-            background: url("../../assets/images/arrow.svg") no-repeat center center;
-            transform: rotate(180deg);
             width: 8px;
             height: 16px;
+            background: url("../../assets/images/arrow.svg") no-repeat center center;
+            transform: rotate(180deg);
           }
         }
       }
@@ -68,10 +68,10 @@
 
       .time {
         flex: 0 0 137px;
+        margin-right: 32px;
         font-weight: 800;
         font-size: 30px;
         line-height: 125%;
-        margin-right: 32px;
 
         sup {
           font-size: 16px;
@@ -82,24 +82,26 @@
         margin-right: 40px;
 
         .title {
+          margin-bottom: 14px;
           font-weight: bold;
           font-size: 16px;
           line-height: 130%;
-          margin-bottom: 14px;
         }
 
         .text {
+          margin-bottom: 14px;
           font-size: 16px;
           line-height: 155%;
-          margin-bottom: 14px;
         }
 
         .program {
           .accordion {
-            background: #F0F0F0;
-            border-radius: 6px;
             border: none;
+            border-radius: 6px;
             padding: 4px 20px;
+            font-size: 14px;
+            line-height: 130%;
+            background: #f0f0f0;
             cursor: pointer;
 
             &.open {
@@ -108,9 +110,9 @@
           }
 
           .description {
-            background: #F0F0F0;
-            border-radius: 0 6px 6px 6px;
             padding: 24px;
+            border-radius: 0 6px 6px 6px;
+            background: #F0F0F0;
           }
         }
       }
@@ -125,29 +127,29 @@
     }
 
     > .text {
+      position: relative;
+      margin-bottom: 36px;
       font-size: 16px;
       line-height: 130%;
       color: #E5E5E5;
-      margin-bottom: 36px;
-      position: relative;
 
       span {
         position: relative;
+        z-index: 10;
         padding-right: 24px;
         background: #fff;
-        z-index: 10;
       }
 
       &::after {
         content: "";
         position: absolute;
-        height: 1px;
-        background: #E5E5E5;
         left: 0;
         top: 50%;
-        width: 100%;
-        transform: translateY(-50%);
         z-index: 0;
+        width: 100%;
+        height: 1px;
+        background: #E5E5E5;
+        transform: translateY(-50%);
       }
     }
 
@@ -161,15 +163,94 @@
         }
 
         .title {
+          margin-bottom: 4px;
           font-weight: 800;
           font-size: 16px;
           line-height: 130%;
-          margin-bottom: 4px;
         }
 
         .description {
           font-size: 11px;
           line-height: 135%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .day {
+    .item {
+      position: relative;
+      padding-bottom: 148px;
+
+      .description {
+        .info{
+          margin-right: 0;
+        }
+  
+        .add {
+          position: absolute;
+          left: 0;
+          bottom: 24px;
+          width: 100%;
+          padding: 0 32px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 566px) {
+  .day {
+    .head {
+      font-size: 18px;
+    }
+
+    .item {
+      padding: 32px 24px 148px;
+
+      .description {
+        flex-direction: column;
+
+        .time {
+          flex: auto;
+          margin-right: 0;
+          margin-bottom: 12px;
+          font-size: 24px;
+
+          sup {
+            font-size: 14px;
+          }
+        }
+
+        .info {
+          .title {
+            margin-bottom: 12px;
+            font-size: 14px;
+            font-weight: 800;
+          }
+          
+          .text {
+            font-size: 14px;
+            margin-bottom: 12px;
+          }
+        }
+      }
+
+      > .text {
+        margin-bottom: 30px;
+        padding-top: 10px;
+        font-size: 14px;
+        border-top: 1px solid #E5E5E5;
+
+        span {
+          padding-right: 0;
+        }
+
+        &::after {
+          display: none;
         }
       }
     }

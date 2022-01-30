@@ -1,32 +1,30 @@
 .order {
-  margin-top: 50px;
-  // margin-top убрать потом
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   margin-bottom: 69px;
 
   .title {
+    margin-right: 25px;
     font-size: 18px;
     line-height: 125%;
-    color: #888888;
-    margin-right: 25px;
+    color: #888;
   }
 
   .weeks {
     display: flex;
+    column-gap: 16px;
     margin: 0;
     padding: 0;
-    column-gap: 16px;
 
     .week {
       list-style: none;
-      padding: 5px 9px;
-      background: #fff;
       border-radius: 20px;
-      color: #191919;
+      padding: 5px 9px;
       font-size: 16px;
       line-height: 130%;
+      color: #191919;
+      background: #fff;
 
       &:hover {
         cursor: pointer;
@@ -42,21 +40,21 @@
 
 .scheduleTable {
   display: flex;
-  flex-wrap: wrap;
   column-gap: 8px;
+  flex-wrap: wrap;
   justify-content: center;
 
   .day {
     flex: 0 1 217px;
-    border-radius: 20px;
     overflow: hidden;
+    border-radius: 20px;
     background: #fff;
 
     .head {
-      background: #E5E5E5;
       padding: 12px 24px;
       font-size: 14px;
       line-height: 130%;
+      background: #E5E5E5;
     }
 
     .item {
@@ -72,44 +70,45 @@
 
       .time {
         position: relative;
-        color: #191919;
+        margin-bottom: 8px;
         font-weight: 800;
         font-size: 16px;
         line-height: 130%;
-        margin-bottom: 8px;
+        color: #191919;
 
         .live {
           position: absolute;
-          top: 8px;
           right: 0;
+          top: 8px;
           display: flex;
-          color: #FF0011;
           font-size: 11px;
           line-height: 1;
+          color: #ff0011;
 
           &::before {
-            content: '';
+            content: "";
+            margin-right: 5px;
+            border-radius: 100%;
             width: 11px;
             height: 11px;
-            background: #FF0011;
-            border-radius: 100%;
-            margin-right: 5px;
+            background: #ff0011;
           }
         }
       }
 
       .place {
         margin-bottom: 8px;
-        font-style: italic;
         font-weight: 600;
+        font-style: italic;
         font-size: 11px;
         line-height: 130%;
-        color: #185ADB;
-
+        color: #185adb;
       }
 
       .description {
+        overflow: hidden;
         margin-bottom: 22px;
+        max-height: 119px;
         font-size: 13px;
         line-height: 130%;
       }
@@ -123,8 +122,8 @@
 
     &.specialDay {
       .head {
-        background: #FFEE00;
         font-weight: 800;
+        background: #FFEE00;
       }
     }
   }
