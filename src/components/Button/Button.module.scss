@@ -1,0 +1,116 @@
+.default {
+  position: relative;
+  border: 1px solid #185ADB;
+  background: #fff;
+  border-radius: 56px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 125%;
+  padding: 10px 54px 10px 10px;
+  min-width: 264px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 16px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: url("../../assets/images/plus.svg") no-repeat center center #185ADB;
+  }
+
+  &:hover {
+    background: #185ADB;
+    color: #fff;
+    cursor: pointer;
+
+    &::after {
+      border-left: 1px solid #fff;
+    }
+  }
+
+  &.active {
+    border-color:  #C0C0C0;
+    color: #808090;
+    background: #E5E5E5;
+
+    &::after {
+      background-color: #E5E5E5;
+      background-image: url("../../assets/images/check.svg");
+      border-left: 1px solid #C0C0C0;
+    }
+
+    &:hover {
+      color: #000222;
+
+      &::after {
+        background-image: url("../../assets/images/cancel.svg");
+      }
+    }
+  }
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-top: auto;
+  width: 117px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  font-size: 11px;
+  line-height: 135%;
+  color: #888899;
+  text-align: right;
+  cursor: pointer;
+  justify-content: flex-end;
+
+  &::after {
+    content: '';
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    margin-left: 16px;
+    border: 1px solid #185ADB;
+    background: url("../../assets/images/plusSmall.svg") no-repeat center center #fff;
+  }
+
+  &:hover {
+    &::after {
+      background-color: #185ADB;
+      background-image: url("../../assets/images/plusSmallHover.svg");
+    }
+  }
+
+  &.active {
+    &::after {
+      border-color: #C0C0C0;
+      background-color: #E5E5E5;
+      background-image: url("../../assets/images/check.svg");
+    }
+
+    &:hover {
+      &::after {
+        background-color: #fff;
+        background-image: url("../../assets/images/cancelSmall.svg");
+      }
+    }
+  }
+}
+
+.special {
+  background: #FFEE00;
+  border-radius: 33px;
+  border: none;
+  padding: 9px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 130%;
+  cursor: pointer;
+}
